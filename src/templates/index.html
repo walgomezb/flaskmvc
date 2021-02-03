@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAIN</title>
+</head>
+<body>
+{% for entry in entries %}
+  <li>
+    <h2>{{ entry.name }}</h2>
+    <div>{{ entry.lastName|safe }}</div>
+  </li>
+{% else %}
+  <li><em>No entries yet. Add some!</em></li>
+{% endfor %}
+</body>
+</html>
